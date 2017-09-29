@@ -1,0 +1,19 @@
+resources:
+
+  - name: app_lb
+    type: loadBalancer
+    integration: gke
+    pointer:
+      sourceName: "app_load_balancer"
+      method: LoadBalancer
+      namespace: shippable
+      clusterName: "multiple-zones-cluster"
+      region: "us-east1-b"
+    version:
+      ports:
+        - name: testPort
+          protocol: TCP
+          port: 80
+      selector:
+        name: "app_service_def"
+        jobName: "app_deploy_job"
