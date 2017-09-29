@@ -4,7 +4,7 @@ resources:
     type: loadBalancer
     integration: gke
     pointer:
-      sourceName: "app_load_balancer"
+      sourceName: "apploadbalancer"
       method: LoadBalancer
       namespace: shippable
       clusterName: "multiple-zones-cluster"
