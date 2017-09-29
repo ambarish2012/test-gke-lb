@@ -11,7 +11,7 @@ resources:
       region: "us-east1-b"
     version:
       ports:
-        - name: testPort
+        - name: testport
           protocol: TCP
           port: 80
       selector:
