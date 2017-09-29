@@ -1,0 +1,6 @@
+jobs:
+
+  - name: app_provision        #friendly name for job
+    type: provision
+    steps:
+      - IN: app_lb             #name of load balancer you created in step 1
